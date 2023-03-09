@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfApp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0">Név:</Label>
+        <TextBox Margin="30px" x:Name="txtNev" Grid.Column="1" Grid.Row="0"></TextBox>
+        <Label VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="1" >Tantárgy:</Label>
+        <ComboBox Margin="90,13,90,13"   x:Name="cboTantargy" Grid.Column="1" Grid.Row="1">
+            <ComboBoxItem>Matek</ComboBoxItem>
+            <ComboBoxItem>Töri</ComboBoxItem>
+            <ComboBoxItem>Angol</ComboBoxItem>
+            <ComboBoxItem>Nyelvtan</ComboBoxItem>
+            <ComboBoxItem>Irodalom</ComboBoxItem>
+        </ComboBox>
+        <Label VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="2">Dátum:</Label>
+        <DatePicker Text="2023-03-09" Margin="25px"  x:Name="dpDatum" Grid.Column="1" Grid.Row="2"></DatePicker>
+        <Label VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="3">Jegy:</Label>
+        <Slider IsSnapToTickEnabled="True" Ticks="1.0,2.0,3.0,4.0,5.0" Margin="25px"  x:Name="sliJegy" Grid.Column="2" Grid.Row="3" Maximum="5" Minimum="1" ></Slider>
+
+        <Button x:Name="btnRogzit" Width="120px" Margin="25px" Grid.ColumnSpan="2" Grid.Row="4" Click="btnRogzit_Click">Rögzít</Button>
+    </Grid>
+</Window>
